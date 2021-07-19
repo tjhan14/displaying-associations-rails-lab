@@ -1,3 +1,7 @@
 class Song < ActiveRecord::Base
-  belongs_to :artist
+  has_many :songs
+
+  def song_count
+    self.songs.size
+  end
 end
